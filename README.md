@@ -72,6 +72,9 @@ ai-data-insights-assistant/
     ├── sql_engine.py          # Executes SQL queries (DuckDB)
     ├── ai_insights.py         # Generates AI insights
     └── question_answering.py  # Handles Q&A over data
+
+```markdown
+
 File Responsibilities
 app.py
 Handles the user interface, file upload, and result display.
