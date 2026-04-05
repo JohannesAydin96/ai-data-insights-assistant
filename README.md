@@ -94,22 +94,22 @@ ai-data-insights-assistant/
 
 ## File Responsibilities
 
-- app.py  
+- **app.py**  
   Handles the user interface, file upload, and displaying results  
 
-- data_loader.py  
+- **data_loader.py**  
   Loads CSV data into a Pandas DataFrame  
 
-- data_profiler.py  
+- **data_profiler.py**  
   Generates dataset statistics (rows, columns, missing values, aggregations)  
 
-- sql_engine.py  
+- **sql_engine.py**  
   Executes SQL queries using DuckDB  
 
-- ai_insights.py  
+- **ai_insights.py**  
   Generates AI insights based on structured summaries  
 
-- question_answering.py  
+- **question_answering.py**  
   Handles natural language questions over the dataset  
 
 ---
