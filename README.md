@@ -1,41 +1,58 @@
-AI Data Insights Assistant
+# AI Data Insights Assistant
 
 An interactive data analysis tool that allows users to upload a CSV file, explore the dataset, generate AI-powered insights, and ask questions about the data.
 
 Built with Python, Pandas, SQL (DuckDB), OpenAI, and Streamlit.
 
-Features
-Upload and analyze CSV datasets
-Automatic data profiling (rows, columns, missing values)
-SQL-based aggregation using DuckDB
-AI-generated insights based on dataset statistics
-Natural language Q&A over your data
-Interactive web interface with Streamlit
-Tech Stack
-Python
-Pandas
-DuckDB
-OpenAI API
-Streamlit
-python-dotenv
-How It Works
-Upload CSV file
-Data is processed using Pandas
-SQL queries run via DuckDB
-AI generates insights
-Users can ask questions about the dataset
-How It Works (Architecture)
+---
+
+## Features
+
+- Upload and analyze CSV datasets
+- Automatic data profiling (rows, columns, missing values)
+- SQL-based aggregation using DuckDB
+- AI-generated insights based on dataset statistics
+- Natural language Q&A over your data
+- Interactive web interface with Streamlit
+
+---
+
+## Tech Stack
+
+- Python
+- Pandas
+- DuckDB
+- OpenAI API
+- Streamlit
+- python-dotenv
+
+---
+
+## How It Works
+
+1. Upload CSV file  
+2. Data is processed using Pandas  
+3. SQL queries run via DuckDB  
+4. AI generates insights  
+5. Users can ask questions about the dataset  
+
+---
+
+## How It Works (Architecture)
 
 The application follows a structured data analysis pipeline:
 
-The user uploads a CSV file
-The dataset is loaded into Pandas for processing
-Basic statistics and summaries are generated
-SQL queries (DuckDB) are executed for aggregations
-AI receives both Pandas and SQL summaries
-The model generates insights or answers based on the data
-Results are displayed in the Streamlit interface
-Pipeline Overview
+1. The user uploads a CSV file  
+2. The dataset is loaded into Pandas for processing  
+3. Basic statistics and summaries are generated  
+4. SQL queries (DuckDB) are executed for aggregations  
+5. AI receives both Pandas and SQL summaries  
+6. The model generates insights or answers based on the data  
+7. Results are displayed in the Streamlit interface  
+
+### Pipeline Overview
+
+
 CSV File
 ↓
 Pandas Processing (Profiling)
@@ -47,38 +64,59 @@ Combined Summary
 LLM (OpenAI API)
 ↓
 Insights / Answers
-Project Structure
+
+
+---
+
+## Project Structure
+
+
 ai-data-insights-assistant/
 │
-├── app.py                  # Streamlit UI (entry point)
-├── README.md              # Project documentation
-├── requirements.txt       # Project dependencies
-├── .env                   # API key (not committed)
+├── app.py # Streamlit UI (entry point)
+├── README.md # Project documentation
+├── requirements.txt # Project dependencies
+├── .env # API key (not committed)
 │
 ├── data/
-│   └── raw/
-│       └── superstore.csv # Example dataset
+│ └── raw/
+│ └── superstore.csv # Example dataset
 │
 ├── src/
-│   ├── data_loader.py         # Loads CSV into Pandas
-│   ├── data_profiler.py       # Generates dataset summaries
-│   ├── sql_engine.py          # Runs SQL queries with DuckDB
-│   ├── ai_insights.py         # Generates AI insights
-│   └── question_answering.py  # Handles Q&A over data
-File Responsibilities
-app.py
-Handles the user interface, file upload, and displaying results
-data_loader.py
-Loads CSV data into a Pandas DataFrame
-data_profiler.py
-Generates dataset statistics (rows, columns, missing values, aggregations)
-sql_engine.py
-Executes SQL queries using DuckDB
-ai_insights.py
-Generates AI insights based on structured summaries
-question_answering.py
-Handles natural language questions over the dataset
-Installation
+│ ├── data_loader.py # Loads CSV into Pandas
+│ ├── data_profiler.py # Generates dataset summaries
+│ ├── sql_engine.py # Runs SQL queries with DuckDB
+│ ├── ai_insights.py # Generates AI insights
+│ └── question_answering.py # Handles Q&A over data
+
+
+---
+
+## File Responsibilities
+
+- app.py  
+  Handles the user interface, file upload, and displaying results  
+
+- data_loader.py  
+  Loads CSV data into a Pandas DataFrame  
+
+- data_profiler.py  
+  Generates dataset statistics (rows, columns, missing values, aggregations)  
+
+- sql_engine.py  
+  Executes SQL queries using DuckDB  
+
+- ai_insights.py  
+  Generates AI insights based on structured summaries  
+
+- question_answering.py  
+  Handles natural language questions over the dataset  
+
+---
+
+## Installation
+
+```bash
 git clone https://github.com/YOUR_USERNAME/ai-data-insights-assistant.git
 cd ai-data-insights-assistant
 
