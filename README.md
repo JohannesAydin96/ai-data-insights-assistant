@@ -18,23 +18,22 @@ The system follows a pipeline where raw data is transformed into structured summ
 
 ## Features
 
-- Upload and analyze CSV datasets  
-- Automatic data profiling (rows, columns, missing values)  
-- SQL-based aggregations using DuckDB  
-- AI-generated insights based on dataset statistics  
-- Natural language question answering over the dataset  
-- Interactive web interface built with Streamlit  
+* Upload and analyze CSV datasets
+* Automatic data profiling (rows, columns, missing values)
+* SQL-based aggregations using DuckDB
+* AI-generated insights based on dataset statistics
+* Natural language question answering over the dataset
+* Interactive web interface built with Streamlit
 
 ---
 
 ## Tech Stack
 
-- Python  
-- Pandas  
-- DuckDB  
-- OpenAI API  
-- Streamlit  
-- python-dotenv  
+* Python
+* Pandas
+* DuckDB
+* OpenAI API
+* Streamlit
 
 ---
 
@@ -42,19 +41,25 @@ The system follows a pipeline where raw data is transformed into structured summ
 
 The application follows a structured data analysis pipeline:
 
-1. The user uploads a CSV file  
-2. The dataset is loaded into Pandas  
-3. Data profiling generates summary statistics  
-4. SQL queries (DuckDB) perform aggregations  
-5. Structured summaries are combined  
-6. The language model generates insights or answers  
-7. Results are displayed in the Streamlit interface  
+1. The user uploads a CSV file
+2. The dataset is loaded into Pandas
+3. Data profiling generates summary statistics
+4. SQL queries (DuckDB) perform aggregations
+5. Structured summaries are combined
+6. The language model generates insights or answers
+7. Results are displayed in the Streamlit interface
 
-```markdown
 ### Pipeline Overview
 
+```
 CSV → Pandas Processing → SQL (DuckDB) → Combined Summary → LLM → Insights / Answers
-Project Structure
+```
+
+---
+
+## Project Structure
+
+```
 ai-data-insights-assistant/
 │
 ├── app.py                 # Streamlit UI (entry point)
@@ -72,49 +77,90 @@ ai-data-insights-assistant/
     ├── sql_engine.py          # Executes SQL queries (DuckDB)
     ├── ai_insights.py         # Generates AI insights
     └── question_answering.py  # Handles Q&A over data
+```
 
-```markdown
+---
 
-File Responsibilities
-app.py
-Handles the user interface, file upload, and result display.
-data_loader.py
-Loads CSV data into a Pandas DataFrame.
-data_profiler.py
-Generates dataset statistics such as rows, columns, missing values, and summaries.
-sql_engine.py
-Executes SQL queries on the dataset using DuckDB.
-ai_insights.py
-Generates insights based on structured summaries using the OpenAI API.
-question_answering.py
-Handles natural language questions over the dataset.
-How to Run
-1. Clone the repository
+## File Responsibilities
+
+* **app.py**
+  Handles the user interface, file upload, and result display.
+
+* **data_loader.py**
+  Loads CSV data into a Pandas DataFrame.
+
+* **data_profiler.py**
+  Generates dataset statistics such as rows, columns, missing values, and summaries.
+
+* **sql_engine.py**
+  Executes SQL queries on the dataset using DuckDB.
+
+* **ai_insights.py**
+  Generates insights based on structured summaries using the OpenAI API.
+
+* **question_answering.py**
+  Handles natural language questions over the dataset.
+
+---
+
+## How to Run
+
+### 1. Clone the repository
+
+```bash
 git clone https://github.com/your-username/ai-data-insights-assistant.git
 cd ai-data-insights-assistant
-2. Create and activate a virtual environment
+```
+
+### 2. Create and activate a virtual environment
 
 Windows:
 
+```bash
 python -m venv .venv
 .venv\Scripts\activate
-3. Install dependencies
+```
+
+### 3. Install dependencies
+
+```bash
 pip install -r requirements.txt
-4. Add your OpenAI API key
+```
 
-Create a .env file in the root directory and add:
+### 4. Add your OpenAI API key
 
+Create a `.env` file in the root directory and add:
+
+```bash
 OPENAI_API_KEY=your_api_key_here
-5. Run the app
+```
+
+### 5. Run the app
+
+```bash
 streamlit run app.py
-Example Usage
-Upload a CSV dataset (e.g., sales data).
-Wait for the dataset to be processed.
-Ask questions such as:
-"Which category has the highest sales?"
-"Which region performs best?"
-"Are there missing values in the dataset?"
-The system will:
-Analyze the dataset
-Generate insights
-Provide answers based on the data
+```
+
+---
+
+## Example Usage
+
+1. Upload a CSV dataset (e.g., sales data)
+2. Wait for the dataset to be processed
+3. Ask questions such as:
+
+   * "Which category has the highest sales?"
+   * "Which region performs best?"
+   * "Are there missing values in the dataset?"
+4. The system will:
+
+   * Analyze the dataset
+   * Generate insights
+   * Provide answers based on the data
+
+---
+
+## Author
+
+Johannes Aydin
+GitHub: https://github.com/JohannesAydin96
